@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Varela", sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: wheat;
+    background: rgb(47, 48, 48);
+    padding: 30px;
+}
+
+.to-do-app{
+    width: 100%;
+    max-width: 340px;
+    margin: 10px 0px;
+    background-color: rgb(119, 209, 119);
+    background-color: rgb(26, 48, 26);
+    padding: 40px 25px;
+    padding-top: 50px;
+    position: relative;
+    margin-top: 60px;
+}
+
+.to-do-app h1{
+    font-size: 36px;
+    color: whitesmoke;
+    margin-top: 10px;
+}
+
+#profile{
+    position: absolute;
+    border-radius: 50%;
+    width: 90px;
+    top: -50px;
+    left: 125px;
+}
+
+.form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #edeef0;
+    padding-left: 10px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 360px){
+    .form{
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        background: none;
+    }
+
+    .form input{
+        text-align: center;
+        background-color: #edeef0;
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    #profile{
+        left: 110px;
+    }
+
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+button{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background: #ff5945;
+    color: whitesmoke;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+ul li{
+    list-style: none;
+    color: whitesmoke;
+    font-size: 18px;
+    padding: 10px 8px 5px 40px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    background-image: url(assets/unchecke-cricle.png);
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    left: 8px;
+}
+
+ul li.checked{
+    color: rgb(170, 166, 166);
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(assets/checked-icon.png);
+}
+
+span{
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    line-height: 0.8;
+    text-align: center;
+    color: whitesmoke;
+    padding: 0px 5px;
+    transition: 0.3s;
+    height: 20px;
+    border: none;
+    top: 14px;
+  }
+  
+  span:hover{
+      color: black;
+      background-color: rgb(186, 186, 186);
+      /* padding: 0px 5px; */
+      border-radius: 20%;
+  }
