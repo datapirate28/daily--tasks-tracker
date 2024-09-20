@@ -93,6 +93,11 @@ button{
     cursor: pointer;
 }
 
+.showDate{
+    color: whitesmoke;
+    margin-top: 10px;
+}
+
 
 ul li{
     list-style: none;

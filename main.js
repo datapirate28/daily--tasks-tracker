@@ -38,3 +38,26 @@ function showTask(){
     tasks.innerHTML = localStorage.getItem('data');
 }
 showTask()
+
+
+// Integrating the update date
+
+const showDate = document.querySelector('.showDate');
+
+// Create a new Date object for the current date and time
+const currentDate = new Date();
+
+// Get the current year
+const year = currentDate.getFullYear();
+
+// Get the current month (0-indexed, so we add 1)
+const month = currentDate.getMonth() + 1; // Months are 0-11
+
+// Get the current day of the month
+const day = currentDate.getDate();
+
+// Format the date as a string (e.g., "YYYY-MM-DD")
+const formattedDate = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
+
+// Output the result
+showDate.innerText = formattedDate
